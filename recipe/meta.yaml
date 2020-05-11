@@ -1,18 +1,18 @@
 {% set name = "sphinx-material" %}
 {% set dunder_name = name.replace("-", "_") %}
-{% set version = "0.0.29" %}
+{% set version = "0.0.30" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ dunder_name }}/{{ dunder_name }}-{{ version }}.tar.gz"
-  sha256: d194f063b57d51cdaf81dfbd713ac9e69389082b3d400b74dc90dbb4ba64ef6d
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ dunder_name }}/{{ dunder_name }}-{{ version }}.tar.gz
+  sha256: a12864f832d792fd445e920c61c82f3c51233eaa652741d91bb20d7c38ab2a82
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -33,11 +33,11 @@ test:
     - sphinx_material
 
 about:
-  home: "https://github.com/bashtage/sphinx-material"
+  home: https://github.com/bashtage/sphinx-material
   license: MIT
   license_family: MIT
   license_file: LICENSE.md
-  summary: "Material sphinx theme"
+  summary: Material sphinx theme
   doc_url: https://pypi.org/project/sphinx-material/#description
   dev_url: https://github.com/bashtage/sphinx-material
 
