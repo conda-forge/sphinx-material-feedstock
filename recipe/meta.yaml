@@ -11,18 +11,19 @@ source:
   sha256: a12864f832d792fd445e920c61c82f3c51233eaa652741d91bb20d7c38ab2a82
 
 build:
-  number: 0
+  noarch: python
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3,<4
   run:
     - beautifulsoup4
     - css-html-js-minify
     - lxml
-    - python
+    - python >=3,<4
     - python-slugify
     - setuptools
     - slugify
