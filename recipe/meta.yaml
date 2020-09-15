@@ -1,6 +1,6 @@
 {% set name = "sphinx-material" %}
 {% set dunder_name = name.replace("-", "_") %}
-{% set version = "0.0.30" %}
+{% set version = "0.0.32" %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ dunder_name }}/{{ dunder_name }}-{{ version }}.tar.gz
-  sha256: a12864f832d792fd445e920c61c82f3c51233eaa652741d91bb20d7c38ab2a82
+  sha256: ec02825a1bbe8b662fe624c11b87f1cd8d40875439b5b18c38649cf3366201fa
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
