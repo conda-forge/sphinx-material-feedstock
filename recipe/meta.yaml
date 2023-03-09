@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -26,7 +26,6 @@ requirements:
     - python >=3.6,<4
     - python-slugify
     - setuptools
-    - slugify
     - sphinx >=2.0
 
 test:
@@ -48,3 +47,4 @@ extra:
     - ndmaxar
     - oblute
     - rluria14
+    - moorepants
