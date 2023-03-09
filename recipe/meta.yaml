@@ -43,6 +43,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - FaustinCarter
     - mxr-conda
     - ndmaxar
     - oblute
